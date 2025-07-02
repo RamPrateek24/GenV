@@ -2,10 +2,9 @@ from manim import *
 
 class TwoEllipses(Scene):
     def construct(self):
-        ellipse1 = Ellipse(width=2, height=1).shift(LEFT * 3)
-        ellipse2 = Ellipse(width=2, height=1).shift(RIGHT * 3)
+        ellipse1 = Ellipse(width=2, height=1)
+        ellipse2 = Ellipse(width=2, height=1).shift(RIGHT * 4)
         
-        self.add(ellipse1, ellipse2)
-        
-        self.play(ellipse1.animate.shift(RIGHT * 3), ellipse2.animate.shift(LEFT * 3), run_time=2)
+        self.play(Create(ellipse1), Create(ellipse2))
+        self.play(ellipse1.animate.shift(RIGHT * 4), ellipse2.animate.shift(LEFT * 4))
         self.wait()
