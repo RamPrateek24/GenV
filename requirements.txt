@@ -4,3 +4,4 @@ langchain-openai==0.0.8
 openai
 python-dotenv
 numpy
+manim

@@ -29,6 +29,6 @@ if st.button("Generate Animation") and prompt:
     match = re.search(r"class\s+(\w+)\(Scene\):", code)
     scene_name = match.group(1) if match else "UnknownScene"
 
-    subprocess.run(["manim", "-pql", "manim_scene.py", scene_name])
+    subprocess.run(["manim", "-ql", "manim_scene.py", scene_name])
 
     st.video(f"media/videos/manim_scene/480p15/{scene_name}.mp4")
