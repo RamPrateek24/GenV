@@ -1,13 +1,9 @@
 from manim import *
 
-class DiagonalShapes(Scene):
+class TwoEllipses(Scene):
     def construct(self):
-        square = Square()
-        circle = Circle()
-
-        square.move_to(LEFT * 3 + DOWN * 2)
-        circle.move_to(RIGHT * 3 + UP * 2)
-
-        self.add(square, circle)
-        self.play(square.animate.move_to(RIGHT * 3 + UP * 2), circle.animate.move_to(LEFT * 3 + DOWN * 2), run_time=3)
+        ellipse1 = Ellipse(width=2, height=1, color=BLUE).shift(LEFT * 3)
+        ellipse2 = Ellipse(width=2, height=1, color=RED).shift(RIGHT * 3)
+        self.add(ellipse1, ellipse2)
+        self.play(ellipse1.animate.shift(RIGHT * 3), ellipse2.animate.shift(LEFT * 3), run_time=2)
         self.wait()
