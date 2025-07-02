@@ -1,10 +1,11 @@
 from manim import *
 
-class RevolvingSquares(Scene):
+class TwoEllipses(Scene):
     def construct(self):
-        square1 = Square(color=BLUE).shift(LEFT)
-        square2 = Square(color=RED).shift(RIGHT)
-        self.add(square1, square2)
-        self.play(Rotate(square1, angle=TAU, run_time=2, rate_func=linear), 
-                  Rotate(square2, angle=-TAU, run_time=2, rate_func=linear))
+        ellipse1 = Ellipse(width=2, height=1).shift(LEFT * 3)
+        ellipse2 = Ellipse(width=2, height=1).shift(RIGHT * 3)
+        
+        self.add(ellipse1, ellipse2)
+        
+        self.play(ellipse1.animate.shift(RIGHT * 3), ellipse2.animate.shift(LEFT * 3), run_time=2)
         self.wait()
