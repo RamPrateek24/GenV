@@ -1,9 +1,14 @@
 from manim import *
 
-class TwoEllipses(Scene):
+class CombineCircles(Scene):
     def construct(self):
-        ellipse1 = Ellipse(width=2, height=1, color=BLUE).shift(LEFT * 3)
-        ellipse2 = Ellipse(width=2, height=1, color=RED).shift(RIGHT * 3)
-        self.add(ellipse1, ellipse2)
-        self.play(ellipse1.animate.shift(RIGHT * 3), ellipse2.animate.shift(LEFT * 3), run_time=2)
-        self.wait()
+        circle1 = Circle(radius=1, color=BLUE).shift(LEFT)
+        circle2 = Circle(radius=1, color=RED).shift(RIGHT)
+
+        self.play(Create(circle1), Create(circle2))
+        self.play(circle1.animate.shift(RIGHT), circle2.animate.shift(LEFT))
+        self.wait(1)
+
+        combined_circle = Circle(radius=1.5, color=PURPLE)
+        self.play(Transform(circle1, combined_circle), Transform(circle2, combined_circle))
+        self.wait(2)

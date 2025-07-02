@@ -7,9 +7,9 @@ os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 model = ChatOpenAI(model="gpt-4o-mini")
 
-st.title("Prompt-to-Manim Video Generator")
+st.title("Gen-V: Generative Visuals")
 
-prompt = st.text_input("Describe the animation:")
+prompt = st.text_input("Give your thoughts:")
 if st.button("Generate Animation") and prompt:
     instruction = (
         "Write only the Python code using Manim. "
