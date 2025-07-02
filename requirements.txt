@@ -1,7 +1,6 @@
 streamlit
-langchain
-langchain-community
+langchain==0.1.14
+langchain-openai==0.0.8
 openai
 python-dotenv
-manim
 numpy
