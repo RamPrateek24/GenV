@@ -1,4 +1,4 @@
-# Gen-V: Animation Generator 🎞️
+# Gen-V: Animation Generator 🎞️(https://genv.onrender.com/)
 
 Gen-V is an AI-powered animation generation tool that turns text prompts into dynamic animations using [Manim](https://docs.manim.community/). Built with [Streamlit](https://streamlit.io/), it provides an interactive UI to visualize ideas through generative animations powered by the [OpenAI API](https://openai.com/).
 
