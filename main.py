@@ -3,6 +3,10 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os, subprocess, re
 
+st.set_page_config(page_title="GenV", layout="wide")
+
+st.title("Welcome to GenV")
+
 load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 model = ChatOpenAI(model="gpt-4o-mini")
